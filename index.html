@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    #mainDiv {
+      width: 50%;
+      margin: 100px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      display: flex;
+      justify-content: space-around;
+      border-bottom: 2px solid #ccc;
+    }
+    li {
+      display: inline;
+    }
+    li button {
+      padding: 10px 20px;
+      background-color: #f4f4f4;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px 5px 0 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-weight: bold;
+    }
+    li button:hover, li button.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #c1, #c2, #c3, #c4 {
+      display: none;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    #c1.active, #c2.active, #c3.active, #c4.active {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      #mainDiv {
+        width: 90%;
+      }
+      li button {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div id="mainDiv">
+    <ul>
+      <li><button id="t1" onclick="tab(0)" class="active">Tab 1</button></li>
+      <li><button id="t2" onclick="tab(1)">Tab 2</button></li>
+      <li><button id="t3" onclick="tab(2)">Tab 3</button></li>
+      <li><button id="t4" onclick="tab(3)">Tab 4</button></li>
+    </ul>
+
+    <div id="c1" class="active">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque qui similique libero, ratione recusandae a est non maxime sed in.</p>
+    </div>
+    <div id="c2">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui dicta repudiandae est, iure delectus, eligendi ducimus vel odio recusandae facere, ullam earum possimus temporibus quisquam necessitatibus inventore omnis sapiente dolor voluptatibus exercitationem! Hic sequi deserunt veritatis esse, ipsa magni sunt?</p>
+    </div>
+    <div id="c3">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque qui similique libero, ratione recusandae a est non maxime sed in Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, natus.</p>
+    </div>
+    <div id="c4">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque qui similique libero, ratione recusandae a est non maxime sed in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam inventore cupiditate quas! Ullam vero omnis nisi qui! Officia reiciendis itaque exercitationem, ducimus repellat neque ipsam autem unde fugiat id odio doloremque eligendi? Saepe reiciendis placeat minima animi rerum facilis vitae.</p>
+    </div>
+    
+  </div>
+
+  <script src="script.js">
+
+  </script>
+</body>
+</html>
